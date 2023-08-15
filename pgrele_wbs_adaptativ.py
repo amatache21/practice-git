@@ -30,34 +30,32 @@ print(f'blocuri biti: {blocuri_biti}')
 for bloc in blocuri_biti:
     bloc_codare_0 = ''
     marime_bloc_codare_0 = 0
-    if '1' in bloc and '0' in bloc or '1' in bloc and '0' not in bloc:
-        # print('blocul contine 1 si 0 sau doar 1')
+    bloc_codare_1 = ''
+    marime_bloc_codare_1 = 0
+    
+    if '1' in bloc and '0' in bloc: 
         bloc_codare_0 = '1' + bloc
-    else:
-        # print('blocul contine numai 0')
+        bloc_codare_1 = '0' + bloc
+    elif '1' in bloc and '0' not in bloc:
+        bloc_codare_0 = '1' + bloc
+        bloc_codare_1 = '1'
+
+    elif '0' in bloc and '1' not in bloc:
+        bloc_codare_1 = '0' + bloc
         bloc_codare_0 = '0'
+        
         
     marime_bloc_codare_0 = len(bloc_codare_0)
     marime_codare_in_zero += marime_bloc_codare_0
     codare_in_zero.append(bloc_codare_0)
 
-print(f'codare_in_zero: {codare_in_zero}')
-print(f'raport codare in zero: {nr_biti / marime_codare_in_zero}')
-
-# ignorarea blocurilor nenule
-for bloc in blocuri_biti:
-    bloc_codare_1 = ''
-    marime_bloc_codare_1 = 0
-    if '1' in bloc and '0' in bloc or '0' in bloc and '1' not in bloc:
-        # print('blocul contine 1 si 0 sau doar 0')
-        bloc_codare_1 = '0' + bloc
-    else: 
-        # print('blocul contine numai 1')
-        bloc_codare_1 = '1'
-
     marime_bloc_codare_1 = len(bloc_codare_1)
     marime_codare_in_unu += marime_bloc_codare_1   
     codare_in_unu.append(bloc_codare_1)
+
+print(f'codare_in_zero: {codare_in_zero}')
+print(f'raport codare in zero: {nr_biti / marime_codare_in_zero}')
+
 
 print(f'codare_in_unu: {codare_in_unu}')
 print(f'raport codare in unu: {nr_biti / marime_codare_in_unu}')
