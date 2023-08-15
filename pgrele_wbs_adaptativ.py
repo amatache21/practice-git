@@ -62,14 +62,22 @@ print(f'raport codare in unu: {nr_biti / marime_codare_in_unu}')
 raport_codare_zero = nr_biti/marime_codare_in_zero
 raport_codare_unu = nr_biti/marime_codare_in_unu
 
-if raport_codare_unu > raport_codare_zero:
-    print(raport_codare_unu) 
-    for bloc in codare_in_unu:
+# if raport_codare_unu > raport_codare_zero:
+#     print(raport_codare_unu) 
+#     for bloc in codare_in_unu:
+#         for bit in bloc:
+#             print(bit)
+
+# else:
+#     print(raport_codare_zero) 
+#     for bloc in codare_in_zero:
+#         for bit in bloc:
+#             print(bit)
+
+def output(raport,codare):
+    print(raport)
+    for bloc in codare:
         for bit in bloc:
             print(bit)
 
-else:
-    print(raport_codare_zero) 
-    for bloc in codare_in_zero:
-        for bit in bloc:
-            print(bit)
+output(raport_codare_unu, codare_in_unu) if raport_codare_unu > raport_codare_zero else output(raport_codare_zero, codare_in_zero)
