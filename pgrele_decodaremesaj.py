@@ -2,8 +2,8 @@ import string
 
 #input cod de decodat
 
-cod_decodare_sir = input()
-# cod_decodare_sir = '195318520'
+# cod_decodare_sir = input()
+cod_decodare_sir = '195318510'
 
 cod_pt_decodare = cod_decodare_sir[:2]
 
@@ -19,7 +19,7 @@ for litera in alphabet:
     cod += 1
     alphabet_cod[litera] = cod
 
-# print(alphabet_cod)
+print(alphabet_cod)
 
 max_cod = max(alphabet_cod.values())
 
